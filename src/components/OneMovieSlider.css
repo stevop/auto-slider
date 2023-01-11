@@ -1,0 +1,47 @@
+.OneMovieSlider {
+	border-radius: 10px;
+	box-shadow: 0 0 15px #e50914;
+	padding: 20px;
+}
+.OneMovieSlider button {
+	background-color: transparent;
+	border: none;
+	color: #e50914;
+	cursor: pointer;
+	font-size: 35px;
+	margin-left: 10px;
+}
+.OneMovieSlider-content {
+	display: flex;
+
+	height: 400px;
+	/* overflow: hidden; */
+
+	position: relative;
+	text-align: center;
+	width: 500px;
+}
+article {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	opacity: 0;
+	transition: all 500ms linear;
+	width: 100%;
+}
+article img {
+	height: 225px;
+	width: 80%;
+}
+article.active-slide {
+	opacity: 1;
+	transform: translateX(0);
+}
+article.last-slide {
+	transform: translateX(-100%);
+}
+article.next-slide {
+	transform: translateX(100%);
+}
